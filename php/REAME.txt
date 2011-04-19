@@ -1,0 +1,35 @@
+ip 2 country
+------------
+
+Files:
+    bench.php                   - Benchmarks the ip2c.php class, file access 
+                                  method.
+    bench_mem.php               - Benchmarks the ip2c_mem.php class, memory 
+                                  cached method.
+    bench_shm.php               - Benchmarks the ip2c_shm.php class, shared 
+                                  memory method.
+    bench_so.php                - Benchmarks the php module (separate download)
+    countryselectexample.php    - Example on how to use it with a form that
+                                  lets users choose their own country.
+    geobench.php                - Benchmarks GeoIP, you need geoip.inc and 
+                                  geoip.dat from maxmind.
+    GPL.txt                     - The license under which this source is
+                                  released, the GNU General Public License.
+    index.php                   - The test app. Detects users country and lets
+                                  them input IP's to map.
+    ip2c.php                    - Class that uses the file access method.
+    ip2c_mem.php                - Class that caches the database in memory.
+    ip2c_shm.php                - Class that uses shared memory, needs 
+                                  wsshm.php to help.
+    ip2cntry.dat                - The binary database
+    isocountryarray.php         - An associative array of the form:
+                                  "two char country code" => "Country name".
+    Servers.lst                 - Sample IP addresses, contains around 18.000
+                                  unique IP addresses.
+    wsshm.php                   - A class to help work with shared memory.
+    READNE.txt                  - This file.
+
+
+If you downloaded the php module and built it into php, you need to comment
+out the dl('ip2c.so'); line.
+

@@ -1,0 +1,5 @@
+rm -f *.so
+gcc -fpic -DCOMPILE_DL_IP2C=1 -I/usr/local/include -I../../TSRM -I../.. -I../../main -I../../Zend -I../../ext/bcmath/libbcmath/src -c ip2c.c ip2country.c
+cc -shared -L/usr/local/lib -rdynamic -o ip2c.so ip2c.o ip2country.o
+mv ip2c.so /usr/lib/php/extensions/no-debug-non-zts-20020429/
+

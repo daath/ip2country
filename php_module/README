@@ -1,0 +1,16 @@
+Building statically:
+
+1. Put these files in php-4.x.x/ext/ip2c
+2. Run ./buildconf --force in the php source folder
+3. Run ./configure --enable-ip2c and whatever else you want
+4. make
+5. If you want: make install
+
+Building loadable object:
+
+1. cc -fpic -DCOMPILE_DL_IP2C=1 -I/usr/local/include -I../../TSRM -I../.. -I../../main -I../../Zend -I../../ext/bcmath/libbcmath/src -c ip2c.c ip2country.c
+2. cc -shared -L/usr/local/lib -rdynamic -o ip2c.so ip2c.o ip2country.o
+3. If you have a place to put the loadable object:
+   mv ip2c.so /usr/lib/php/extensions/
+4. Use dl('ip2c.so');
+

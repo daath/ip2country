@@ -1,0 +1,16 @@
+<Combine fileversion="1.0" name="ip2c" description="">
+  <StartMode startupentry="ip2c" single="True">
+    <Execute entry="ip2c" type="None" />
+  </StartMode>
+  <Entries>
+    <Entry filename=".\.\ip2c.prjx" />
+  </Entries>
+  <Configurations active="Debug">
+    <Configuration name="Release">
+      <Entry name="ip2c" configurationname="Debug" build="False" />
+    </Configuration>
+    <Configuration name="Debug">
+      <Entry name="ip2c" configurationname="Debug" build="False" />
+    </Configuration>
+  </Configurations>
+</Combine>

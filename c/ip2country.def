@@ -1,0 +1,8 @@
+LIBRARY "ip2country"
+DESCRIPTION "Weird Silence ip2country module for geo-locating IP addresses"
+
+EXPORTS
+	ip2c_init
+	ip2c_lookup
+	ip2c_idx2country
+	ip2c_destroy
